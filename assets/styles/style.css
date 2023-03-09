@@ -1629,8 +1629,7 @@ html {
 }
 
 .text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(7 35 68 / var(--tw-text-opacity));
+  color: #072344 !important;
 }
 
 .text-white {
