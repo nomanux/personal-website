@@ -10,9 +10,12 @@
       name="viewport"
     />
 
-    <title>Abdullah Al Noman | UI/UX Designer</title>
+    <title>Abdullah Al Noman | UI/UX Designer in Bangladesh</title>
 
-    <meta property="og:title" content="Abdullah Al Noman | UI/UX Designer" />
+    <meta
+      property="og:title"
+      content="Abdullah Al Noman | UI/UX Designer in Bangladesh"
+    />
 
     <meta property="og:locale" content="en_US" />
 
@@ -73,12 +76,12 @@
       rel="stylesheet"
     />
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css"
-    />
+    /> -->
 
     <script>
       hljs.initHighlightingOnLoad();
@@ -89,6 +92,7 @@
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
       defer
     ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <!-- <style type="text/tailwindcss">
       @layer utilities {
@@ -103,24 +107,21 @@
     x-data="global()"
     x-init="themeInit()"
     :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
-    class="dark:bg-primary"
   >
-    <div id="main" class="mx-auto max-w-4xl px-4">
+    <div id="main" class="mx-auto max-w-7xl px-4">
       <div class="container sticky top-0 z-30 mx-auto w-full">
-        <div
-          class="flex items-center justify-between bg-white py-6 dark:bg-primary lg:py-10"
-        >
+        <div class="flex items-center justify-between bg-white py-6 lg:py-10">
           <a href="/" class="flex items-center">
             <span href="/" class="mr-2">
               <img src="/assets/img/logo.svg" alt="logo" />
             </span>
             <p
-              class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block"
+              class="hidden font-body text-2xl font-bold text-primary lg:block"
             ></p>
           </a>
           <div class="flex items-center lg:hidden">
             <i
-              class="bx mr-8 cursor-pointer text-3xl text-primary dark:text-white"
+              class="bx mr-8 cursor-pointer text-3xl text-primary"
               @click="themeSwitch()"
               :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
             ></i>
@@ -130,7 +131,7 @@
               height="15"
               xmlns="http://www.w3.org/2000/svg"
               @click="isMobileMenuOpen = true"
-              class="fill-current text-primary dark:text-white"
+              class="fill-current text-primary"
             >
               <g fill-rule="evenodd">
                 <rect width="24" height="3" rx="1.5" />
@@ -147,32 +148,10 @@
                 ></div>
                 <a
                   href="/"
-                  class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+                  class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green"
                   >Intro</a
                 >
               </li>
-
-              <!-- <li class="group relative mr-6 mb-1">
-                <div
-                  class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
-                ></div>
-                <a
-                  href="./blog.html"
-                  class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-                  >Blog</a
-                >
-              </li> -->
-
-              <!-- <li class="group relative mr-6 mb-1">
-                <div
-                  class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow"
-                ></div>
-                <a
-                  href="./post.html"
-                  class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
-                  >Uses</a
-                >
-              </li> -->
 
               <li class="group relative mr-6 mb-1">
                 <div
@@ -180,7 +159,7 @@
                 ></div>
                 <a
                   href="./contact.html"
-                  class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+                  class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:group-hover:text-secondary"
                   >Contact</a
                 >
               </li>
@@ -188,24 +167,9 @@
                 <a
                   target="_blank"
                   href="./assets/files/Noman-UIUX.pdf"
-                  class="relative z-30 mr-6 block rounded-sm bg-secondary px-4 py-3 font-body text-lg font-medium text-white transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary"
+                  class="relative z-30 mr-6 block rounded-xl bg-black px-4 py-3 font-body text-lg font-medium text-white transition-colors group-hover:text-green dark:group-hover:text-secondary"
                   >View CV</a
                 >
-
-                <!-- <a
-                  href="/"
-                  class="block bg-secondary px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-2xl"
-                >
-                  View CV
-                </a> -->
-              </li>
-
-              <li>
-                <i
-                  class="bx cursor-pointer text-3xl text-primary dark:text-white"
-                  @click="themeSwitch()"
-                  :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"
-                ></i>
               </li>
             </ul>
           </div>
@@ -259,75 +223,79 @@
 
       <div>
         <div class="container mx-auto">
-          <div class="py-16 lg:py-20">
+          <div class="flex flex-col gap-24 py-16 sm:flex sm:flex-row lg:py-20">
+            <div class="order-last sm:order-first">
+              <div class="available bg-emerald-100 rounded-full py-1 px-2">
+                <div class="circle"></div>
+                <p class="text-emerald-800">Available for work</p>
+              </div>
+              <h1
+                class="pt-3 font-body text-4xl font-semibold text-primary md:text-5xl lg:text-6xl"
+              >
+                <span class="font-thin">Hi, I’m</span> Abdullah Al Noman.
+              </h1>
+              <p
+                class="pt-4 font-body text-xl font-light text-primary xs:pt-12 sm:pt-4 md:pt-6 lg:pt-4"
+              >
+                A UI/UX Designer and web designer in Dhaka, Bangladesh.
+              </p>
+
+              <div
+                class="mr-auto mt-5 flex flex-col items-start gap-7 sm:mr-0 sm:pt-0 lg:flex-row"
+              >
+                <a
+                  class="font-body text-2xl text-primary underline underline-offset-8 transition-colors hover:text-secondary"
+                  href="https://www.behance.net/noman523"
+                  target="_blank"
+                >
+                  <!-- <i
+                class="bx bxl-behance text-4xl text-primary transition-colors hover:text-secondary "
+              ></i> -->
+                  See Behance Profile
+                </a>
+
+                <!-- <a href="https://codepen.io/ " target="_blank">
+              <i
+                class="bx bxl-codepen pl-5 text-4xl text-primary transition-colors hover:text-secondary "
+              ></i>
+            </a> -->
+
+                <a
+                  class="font-body text-2xl text-primary underline underline-offset-8 transition-colors hover:text-secondary"
+                  href="https://www.linkedin.com/in/noman523/"
+                  target="_blank"
+                >
+                  <!-- <i
+                class="bx bxl-linkedin mb-2 pl-5 text-primary transition-colors hover:text-secondary "
+              ></i> -->
+                  Go to linkedin Profile
+                </a>
+              </div>
+              <a
+                href="/assets/files/Noman-UIUX.pdf"
+                class="mt-6 inline-block rounded-md bg-black px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:text-left sm:text-2xl md:hidden"
+              >
+                View CV
+              </a>
+            </div>
+
             <div>
               <img
-                src="/assets/img/face2.png"
-                class="mb-3 h-16 w-16"
-                alt="author"
+                class="... h-96 w-96 rounded-3xl object-cover"
+                src="/assets/img/noman.png"
               />
             </div>
-            <h1
-              class="pt-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl"
-            >
-              <span class="font-thin">Hi, I’m</span> Abdullah Al Noman.
-            </h1>
-            <p
-              class="pt-4 font-body text-xl font-light text-primary dark:text-white xs:pt-12 sm:pt-4 md:pt-6 lg:pt-4"
-            >
-              A UI/UX Designer and web designer in Dhaka, Bangladesh.
-            </p>
-
-            <div
-              class="mr-auto mt-5 flex flex-col items-start gap-7 sm:mr-0 sm:pt-0 lg:flex-row"
-            >
-              <a
-                class="font-body text-2xl text-primary underline underline-offset-8 transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
-                href="https://www.behance.net/noman523"
-                target="_blank"
-              >
-                <!-- <i
-                  class="bx bxl-behance text-4xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
-                ></i> -->
-                See Behance Profile
-              </a>
-
-              <!-- <a href="https://codepen.io/ " target="_blank">
-                <i
-                  class="bx bxl-codepen pl-5 text-4xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
-                ></i>
-              </a> -->
-
-              <a
-                class="font-body text-2xl text-primary underline underline-offset-8 transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
-                href="https://www.linkedin.com/in/noman523/"
-                target="_blank"
-              >
-                <!-- <i
-                  class="bx bxl-linkedin mb-2 pl-5 text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
-                ></i> -->
-                Go to linkedin Profile
-              </a>
-            </div>
-            <a
-              href="/assets/files/Noman-UIUX.pdf"
-              class="mt-6 inline-block rounded-md bg-secondary px-10 py-4 text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green sm:text-left sm:text-2xl md:hidden"
-            >
-              View CV
-            </a>
           </div>
 
           <div class="border-b border-grey-lighter py-16 lg:py-20">
             <div class="flex items-center pb-6">
               <img src="/assets/img/icon-story.png" alt="icon story" />
-              <h3
-                class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
-              >
+              <h3 class="ml-3 font-body text-2xl font-semibold text-primary">
                 My Story
               </h3>
             </div>
             <div>
-              <p class="font-body font-light text-primary dark:text-white">
+              <p class="font-body font-light text-primary">
                 As a Product Designer, interested in user problems, and finding
                 solutions also responsible for designing and prototyping the
                 user experience for a product. From inception to completion, I
@@ -343,116 +311,10 @@
             </div>
           </div>
 
-          <!-- <div class="py-16 lg:py-20">
-            <div class="flex items-center pb-6">
-              <img src="/assets/img/icon-story.png" alt="icon story" />
-              <h3
-                class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
-              >
-                My Story
-              </h3>
-              <a
-                href="/blog"
-                class="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary"
-              >
-                All posts
-                <img
-                  src="/assets/img/long-arrow-right.png"
-                  class="ml-3"
-                  alt="arrow right"
-                />
-              </a>
-            </div>
-            <div class="pt-8">
-              <div class="border-b border-grey-lighter pb-8">
-                <span
-                  class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green"
-                  >category</span
-                >
-                <a
-                  href="/post"
-                  class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
-                  >Quis hendrerit dolor magna eget est lorem ipsum dolor sit</a
-                >
-                <div class="flex items-center pt-4">
-                  <p
-                    class="pr-2 font-body font-light text-primary dark:text-white"
-                  >
-                    July 19, 2023
-                  </p>
-                  <span class="font-body text-grey dark:text-white">//</span>
-                  <p
-                    class="pl-2 font-body font-light text-primary dark:text-white"
-                  >
-                    4 min read
-                  </p>
-                </div>
-              </div>
-              <div class="border-b border-grey-lighter pt-10 pb-8">
-                <div class="flex items-center">
-                  <span
-                    class="mb-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark"
-                    >category</span
-                  >
-                  <span
-                    class="mb-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark"
-                    >category</span
-                  >
-                </div>
-                <a
-                  href="/post"
-                  class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
-                  >Senectus et netus et malesuada fames ac turpis egestas
-                  integer</a
-                >
-                <div class="flex items-center pt-4">
-                  <p
-                    class="pr-2 font-body font-light text-primary dark:text-white"
-                  >
-                    June 30, 2023
-                  </p>
-                  <span class="font-body text-grey dark:text-white">//</span>
-                  <p
-                    class="pl-2 font-body font-light text-primary dark:text-white"
-                  >
-                    5 min read
-                  </p>
-                </div>
-              </div>
-              <div class="border-b border-grey-lighter pt-10 pb-8">
-                <span
-                  class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue"
-                  >category</span
-                >
-                <a
-                  href="/post"
-                  class="block font-body text-lg font-semibold text-primary transition-colors hover:text-green dark:text-white dark:hover:text-secondary"
-                  >Vulputate ut pharetra sit amet aliquam id diam maecenas
-                  ultricies</a
-                >
-                <div class="flex items-center pt-4">
-                  <p
-                    class="pr-2 font-body font-light text-primary dark:text-white"
-                  >
-                    June 26, 2023
-                  </p>
-                  <span class="font-body text-grey dark:text-white">//</span>
-                  <p
-                    class="pl-2 font-body font-light text-primary dark:text-white"
-                  >
-                    3 min read
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
           <div class="mt-16 pt-16 lg:pb-20">
             <div class="flex items-center pb-6">
               <img src="/assets/img/icon-project.png" alt="icon story" />
-              <h3
-                class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white"
-              >
+              <h3 class="ml-3 font-body text-2xl font-semibold text-primary">
                 My Projects
               </h3>
             </div>
@@ -462,12 +324,10 @@
                 class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
               >
                 <span class="w-9/10 pr-8">
-                  <h4
-                    class="font-body text-lg font-semibold text-primary dark:text-white"
-                  >
+                  <h4 class="font-body text-lg font-semibold text-primary">
                     Wearit Delivery System
                   </h4>
-                  <p class="font-body font-light text-primary dark:text-white">
+                  <p class="font-body font-light text-primary">
                     Delivery app for Wearit eCommerce riders: specific radius,
                     online/offline modes, and notifications for deliveries.
                   </p>
@@ -480,75 +340,6 @@
                   />
                 </span>
               </a>
-
-              <!-- <a
-                href=" / "
-                class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
-              >
-                <span class="w-9/10 pr-8">
-                  <h4
-                    class="font-body text-lg font-semibold text-primary dark:text-white"
-                  >
-                    Maizzle
-                  </h4>
-                  <p class="font-body font-light text-primary dark:text-white">
-                    Framework for Rapid Email Prototyping
-                  </p>
-                </span>
-                <span class="w-1/10">
-                  <img
-                    src="/assets/img/chevron-right.png"
-                    class="mx-auto"
-                    alt="chevron right"
-                  />
-                </span>
-              </a> -->
-
-              <!-- <a
-                href=" / "
-                class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
-              >
-                <span class="w-9/10 pr-8">
-                  <h4
-                    class="font-body text-lg font-semibold text-primary dark:text-white"
-                  >
-                    Alpine.js
-                  </h4>
-                  <p class="font-body font-light text-primary dark:text-white">
-                    Think of it like Tailwind for JavaScript.
-                  </p>
-                </span>
-                <span class="w-1/10">
-                  <img
-                    src="/assets/img/chevron-right.png"
-                    class="mx-auto"
-                    alt="chevron right"
-                  />
-                </span>
-              </a>
-
-              <a
-                href=" / "
-                class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6"
-              >
-                <span class="w-9/10 pr-8">
-                  <h4
-                    class="font-body text-lg font-semibold text-primary dark:text-white"
-                  >
-                    PostCSS
-                  </h4>
-                  <p class="font-body font-light text-primary dark:text-white">
-                    A tool for transforming CSS with JavaScript
-                  </p>
-                </span>
-                <span class="w-1/10">
-                  <img
-                    src="/assets/img/chevron-right.png"
-                    class="mx-auto"
-                    alt="chevron right"
-                  />
-                </span>
-              </a> -->
             </div>
           </div>
         </div>
@@ -562,27 +353,25 @@
             <a href="/" class="mr-auto sm:mr-6">
               <img src="/assets/img/logo.svg" alt="logo" />
             </a>
-            <p
-              class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0"
-            >
+            <p class="pt-5 font-body font-light text-primary sm:pt-0">
               ©2023 Abdullah Al Noman.
             </p>
           </div>
           <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
             <a href="https://www.behance.net/noman523" target="_blank">
               <i
-                class="bx bxl-behance pl-5 text-5xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
+                class="bx bxl-behance pl-5 text-5xl text-primary transition-colors hover:text-secondary"
               ></i>
             </a>
             <a href="https://www.linkedin.com/in/noman523/" target="_blank">
               <i
-                class="bx bxl-linkedin pl-5 text-4xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
+                class="bx bxl-linkedin pl-5 text-4xl text-primary transition-colors hover:text-secondary"
               ></i>
             </a>
 
             <a href="https://www.facebook.com/noman523/" target="_blank">
               <i
-                class="bx bxl-facebook pl-5 text-4xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary"
+                class="bx bxl-facebook pl-5 text-4xl text-primary transition-colors hover:text-secondary"
               ></i>
             </a>
           </div>
