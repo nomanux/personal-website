@@ -10,39 +10,40 @@
       name="viewport"
     />
 
-    <title>Abdullah Al Noman | UI/UX Designer in Bangladesh</title>
+    <title>Abdullah Al Noman | Product Designer in Bangladesh</title>
 
-    <!-- <meta
-      property="og:title"
-      content="Abdullah Al Noman | UI/UX Designer in Bangladesh"
-    />
 
-    <meta property="og:locale" content="en_US" />
 
-    <meta property="og:url" content="https://atlas.tailwindmade.com/" />
+    <!-- Primary Meta Tags -->
+<title>Abdullah AL Noman | Product Designer in Bangladesh</title>
+<meta name="title" content="Abdullah AL Noman | Product Designer in Bangladesh" />
+<meta name="description" content="Noman: UI/UX expert crafting user-friendly wonders. Elevate product experiences with seamless design and collaborative brilliance." />
 
-    <meta
-      name="description"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    /> -->
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.nomanux.com" />
+<meta property="og:title" content="Abdullah AL Noman | Product Designer in Bangladesh" />
+<meta property="og:description" content="Noman: UI/UX expert crafting user-friendly wonders. Elevate product experiences with seamless design and collaborative brilliance." />
+<meta property="og:image" content="./assets/img/noman523.png" />
 
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://www.nomanux.com" />
+<meta property="twitter:title" content="Abdullah AL Noman | Product Designer in Bangladesh" />
+<meta property="twitter:description" content="Noman: UI/UX expert crafting user-friendly wonders. Elevate product experiences with seamless design and collaborative brilliance." />
+<meta property="twitter:image" content="./assets/img/noman523.png" />
+
+
+
+
+
+
+    
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
 
-    <!-- <meta property="og:site_name" content="Atlas Template" />
+  
 
-    <meta
-      property="og:image"
-      content=""
-    />
-
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <meta name="twitter:site" content="@tailwindmade" /> -->
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-    />
+   
 
     <link href="./style.css" rel="stylesheet" />
     <link
@@ -53,12 +54,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css"
-    /> -->
+  
 
     <script>
       hljs.initHighlightingOnLoad();
@@ -72,28 +68,40 @@
 
     <script src="./assets/js/main.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <!-- <style type="text/tailwindcss">
-      @layer utilities {
-        .content-auto {
-          content-visibility: auto;
-        }
-      }
-    </style> -->
+   
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QKKNBXLGXC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QKKNBXLGXC');
+</script>
 
   <body
     x-data="global()"
     x-init="themeInit()"
-    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative font-figtree' : ''"
+    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative ' : ''"
   >
-    <div id="main" class="mx-auto max-w-7xl px-4">
-      <div class="container sticky top-0 z-30 mx-auto w-full">
-        <div class="flex items-center justify-between bg-white py-6 lg:py-10">
+    <div class="absolute w-full h-screen top-0 left-0 right-0 z-0">
+      <img src="./assets/img/herobg.svg" alt="" class="object-none" />
+    </div>
+    <div id="main" class="mx-auto max-w-7xl px-2 relative">
+      <div class="container sticky top-4 z-30 mx-auto w-full">
+        <div
+          class="flex items-center justify-between bg-gray-100/90 py-4 sm:py-6 sm:mt-6 backdrop-blur rounded-2xl px-5"
+        >
           <a href="index.html" class="flex items-center">
-            <span class="mr-2">
+
+            <img src="./assets/img/noman-logo.svg" alt="Abdullah AL Noman" class="sm:h-11 sm:w-11 h-10 w-10">
+            <span class="mr-2 hidden">
               <!-- <img src="./assets/img/logo.svg" alt="logo" /> -->
-              <p class="font-bold text-2xl">Abdullah Al Noman</p>
+              <p class="font-semibold text-2xl text-slate-800">
+                <span>Abdullah Al</span> Noman
+              </p>
+              
               <svg
                 class="hidden"
                 width="114"
@@ -137,39 +145,41 @@
               </g>
             </svg>
           </div>
+
+          <!-- navbar start -->
           <div class="hidden lg:block">
-            <ul class="flex items-center">
-              <li class="group relative mr-6 mb-1">
+            <ul class="flex items-center gap-0">
+              <li class="group relative mb-1">
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/in/noman523/"
-                  class="relative z-30 block px-2 font-body text-xl font-medium transition-colors group-hover:text-green-500"
+                  class="relative z-30 block px-6 py-2 font-body text-lg font-medium transition-colors group-hover:text-green-500"
                   >Linkedin</a
                 >
               </li>
-              <li class="group relative mr-6 mb-1">
+              <li class="group relative mb-1">
                 <a
                   target="_blank"
                   href="https://www.behance.net/noman523"
-                  class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
+                  class="relative z-30 block px-6 py-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
                   >Behance</a
                 >
               </li>
-              <li class="group relative mr-6 mb-1">
+              <li class="group relative mb-1">
                 <a
                   target="_blank"
                   href="https://drive.google.com/drive/folders/14kb6xKBoeiO_yBwm0MJK_vTnlOagY3BD?usp=drive_link"
-                  class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
+                  class="relative z-30 block px-6 py-2 font-body text-lg font-medium transition-colors  group-hover:text-green-600"
                   >Resume</a
                 >
               </li>
-              <li class="group relative mr-6 mb-1">
+              <!-- <li class="group relative mb-1">
                 <a
                   href="mailto:hello@nomanux.com"
                   class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
                   >Contact</a
                 >
-              </li>
+              </li> -->
 
               <!-- <li class="group relative mr-6 mb-1">
                 <div
@@ -181,14 +191,6 @@
                   >Contact</a
                 >
               </li> -->
-              <li>
-                <a
-                  target="_blank"
-                  href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&t=bGHd2PXTMSHGDiGc-1"
-                  class="relative z-30 mr-6 block rounded-xl px-4 py-3 font-body bg-slate-800 text-lg font-medium text-white transition-colors group-hover:text-green dark:group-hover:"
-                  >View Portfolio</a
-                >
-              </li>
             </ul>
           </div>
         </div>
@@ -198,17 +200,17 @@
         class="pointer-events-none fixed inset-0 z-50 flex bg-opacity-80 opacity-0 transition-opacity lg:hidden bg-slate-900"
         :class="isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''"
       >
-        <div class="ml-auto w-2/3 px-4 py-5 md:w-1/3 bg-cyan-950">
+        <div class="ml-auto w-2/3 px-4 py-5 md:w-1/3 bg-slate-900">
           <i
             class="bx bx-x absolute top-0 right-0 mt-7 mr-4 text-4xl text-white"
             @click="isMobileMenuOpen = false"
           ></i>
-          <ul class="mt-8 flex flex-col text-white">
+          <ul class="mt-20 flex flex-col gap-8 text-white">
             <li class="group relative mr-6 mb-1">
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/noman523/"
-                class="relative z-30 block px-2 font-body text-xl font-medium transition-colors group-hover:text-green-500"
+                class="relative z-30 block px-2 font-body text-3xl font-medium transition-colors group-hover:text-green-500"
                 >Linkedin</a
               >
             </li>
@@ -216,62 +218,85 @@
               <a
                 target="_blank"
                 href="https://www.behance.net/noman523"
-                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
+                class="relative z-30 block px-2 font-body text-3xl font-medium transition-colors group-hover:text-green-600"
                 >Behance</a
               >
             </li>
             <li class="group relative mr-6 mb-1">
               <a
                 target="_blank"
+                href="https://www.facebook.com/noman523"
+                class="relative z-30 block px-2 font-body text-3xl font-medium transition-colors group-hover:text-green-600"
+                >Facebook</a
+              >
+            </li>
+            <li class="group relative mr-6 mb-1">
+              <a
+                target="_blank"
                 href="https://drive.google.com/drive/folders/14kb6xKBoeiO_yBwm0MJK_vTnlOagY3BD?usp=sharing"
-                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
+                class="relative z-30 block px-2 font-body text-3xl font-medium transition-colors group-hover:text-green-600"
                 >Resume</a
               >
             </li>
             <li class="group relative mr-6 mb-1">
               <a
                 href="mailto:hello@nomanux.com"
-                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green-600"
+                class="relative z-30 block px-2 font-body text-3xl font-medium transition-colors group-hover:text-green-600"
                 >Contact</a
               >
             </li>
+            <!-- <li>
+              <a
+                target="_blank"
+                href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&t=bGHd2PXTMSHGDiGc-1"
+                class="relative z-30 block rounded-xl px-4 py-3 font-body bg-white text-lg font-medium text-emerald-600 transition-colors group-hover:text-green dark:group-hover:"
+                >View Portfolio</a
+              >
+            </li> -->
           </ul>
         </div>
       </div>
 
       <div>
-        <div class="container mx-auto">
+        <div class="container mx-auto sm:px-6 px-4">
           <div
-            class="flex flex-col gap-24 py-16 sm:flex sm:flex-row lg:py-20 justify-between"
+            class="flex flex-col sm:gap-24 gap-12 sm:flex sm:flex-row justify-between sm:min-h-[700px] min-h-[500px] sm:mt-0 mt-12"
           >
-            <div class="order-last sm:order-first sm:w-4/6 w-full">
+            <!-- order-last sm:order-first -->
+            <div
+              class="sm:w-4/6 w-full flex flex-col items-center justify-center sm:mt-0 mt-8"
+            >
               <div class="flex flex-col sm:gap-8 gap-4">
-                <div class="flex">
+                <!-- <div>
                   <div class="flex gap-2 items-center rounded-full py-1">
-                    <!-- <div class="bg-[#34d399] w-2 h-2 rounded"></div> -->
                     <span class="loader"></span>
-                    <p class="text-emerald-800">Available for work</p>
+                    <p class="text-emerald-600">Available for work</p>
                   </div>
-                </div>
+                </div> -->
                 <h1
-                  class="font-normal text-3xl md:text-5xl lg:text-4xl text-gray-500 tracking-normal"
+                  class="font-normal text-xl  lg:text-3xl text-gray-500 tracking-normal"
                 >
                   Hi there!
-                  <span class="font-bold text-slate-800"> I’m Noman</span>
-                  <span class="wave">👋</span> <br />
+                  <span class="font-semibold text-slate-800"> I’m Noman</span>
+                  <span class="wave text-4xl">👋</span> <br />
+                </h1>
+                <h1
+                  class="font-normal text-5xl md:text-5xl lg:text-7xl text-gray-500 tracking-tighter capitalize"
+                >
                   <span
-                    class="font-semibold mt-3 block text-gray-800 leading-normal"
+                    class="font-medium mt-3 block text-gray-800 leading-[1.2]"
                   >
                     <!-- Create impactful designs through engaging experiences. -->
-                    A
+                    
                     <span
-                      class="bg-gradient-to-r from-sky-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-extrabold"
+                      class="bg-gradient-to-r from-sky-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-semibold"
                       >Product Designer</span
                     >
-                    Shaping digital experiences with a touch of
-                    simplicity.</span
-                  >
+                <br>
+                    Who crafting digital experiences.
+                  </span>
                 </h1>
+
                 <!-- <h4 class="text-2xl">
                   Currently @
                   <a
@@ -291,7 +316,7 @@
                   knockout product experiences.
                 </p> -->
 
-                <div class="flex gap-2 items-center text-gray-00 mt-2">
+                <div class="flex gap-2 items-center text-gray-00 mt-2 hidden">
                   <div class="text-yellow-600">
                     <svg
                       class="h-6 w-6"
@@ -318,6 +343,37 @@
                   <p class="mb-0 text-lg text-yellow-600">Dhaka, Bangladesh</p>
                 </div>
 
+                <div class="mt-8">
+                  <div class="flex gap-4">
+                    <a
+                      target="_blank"
+                      href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&t=bGHd2PXTMSHGDiGc-1"
+                      class="flex items-center justify-center gap-2 rounded-xl sm:px-10 py-4 px-7 font-body bg-gray-800 text-base font-medium text-white"
+                    >
+                      View Portfolio<span>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17.6559 6.3434C17.8434 6.53096 17.9487 6.78531 17.9486 7.05051L17.9486 15.5358C17.9441 15.798 17.8367 16.0478 17.6497 16.2316C17.4627 16.4154 17.211 16.5184 16.9488 16.5184C16.6866 16.5184 16.4349 16.4154 16.2479 16.2316C16.0608 16.0478 15.9535 15.798 15.9489 15.5358L15.9489 9.46457L7.75641 17.6571C7.56887 17.8446 7.31452 17.95 7.0493 17.95C6.78408 17.95 6.52973 17.8446 6.34219 17.6571C6.15466 17.4696 6.0493 17.2152 6.0493 16.95C6.0493 16.6848 6.15466 16.4304 6.34219 16.2429L14.5347 8.05036L8.46351 8.05036C8.20135 8.0458 7.95146 7.93846 7.76767 7.75144C7.58388 7.56443 7.48089 7.31272 7.48089 7.05051C7.48089 6.7883 7.58388 6.53659 7.76767 6.34957C7.95146 6.16256 8.20135 6.05522 8.46351 6.05066L16.9488 6.05066C17.214 6.05062 17.4683 6.15592 17.6559 6.3434Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </span>
+                    </a>
+                    <a
+                      href="mailto:hello@nomanux.com"
+                      class="inline-block rounded-xl sm:px-10 py-4 px-7 bg-white border shadow border-slate-200 text-center font-body text-base font-semibold text-slate-800"
+                    >
+                      Ping Me
+                    </a>
+                  </div>
+                </div>
+
                 <!-- <div
                   class="mr-auto mt-5 flex flex-col items-start gap-7 sm:mr-0 sm:pt-0 lg:flex-row"
                 >
@@ -337,7 +393,7 @@
                     Go to linkedin Profile
                   </a>
                 </div> -->
-                <div class="flex gap-4">
+                <!-- <div class="flex gap-4">
                   <a
                     href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&mode=design"
                     class="mt-6 inline-block rounded-md px-10 py-4 bg-slate-800 text-center font-body text-base font-semibold text-white transition-colors sm:text-left sm:text-2xl md:hidden"
@@ -350,22 +406,48 @@
                   >
                     Contact Me
                   </a>
-                </div>
+                </div> -->
               </div>
             </div>
 
-            <div>
-              <img
-                class="... h-96 w-full aspect-square rounded-3xl object-cover shadow-2xl border-4 border-white shadow-cyan-100/50"
-                src="./assets/img/noman.png"
-              />
+            <div class="flex sm:items-center items-start gap-4">
+              <div class="relative">
+                <div class="absolute sm:bottom-4 sm:left-6 bottom-4 left-6 sm:block ">
+                  <div
+                    class="flex flex-col gap-0 rounded-lg px-3 py-3 bg-white/5 backdrop-blur-xl border border-white/50"
+                  >
+                    <label class="text-white font-regular"
+                      >Years of Experience</label
+                    >
+                    <p class="text-white text-4xl font-bold">4+</p>
+                  </div>
+                </div>
+                <img
+                  class="... sm:h-96  w-fit sm:w-full aspect-square rounded-3xl object-cover border border-gray-100"
+                  src="./assets/img/noman.png"
+                />
+              </div>
+
+              <div class="sm:bottom-4 sm:left-6 sm:hidden hidden">
+                <div
+                  class="flex flex-col gap-0 rounded-lg px-3 py-3 bg-white/5 backdrop-blur-xl border border-white/50"
+                >
+                  <label class="text-slate-500 font-regular"
+                    >Years of Experience</label
+                  >
+                  <p class="text-emerald-600 text-4xl font-bold">4+</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="py-16 lg:py-20">
-            <div class="flex items-center pb-6">
+          <div class="py-24 pt-40 sm:py-16">
+            <div class="pb-6">
+              <p class="uppercase sm:text-center text-left text-slate-600">
+                My Works
+              </p>
               <h3
-                class="font-body sm:text-5xl text-2xl text-slate-800 font-bold mt-5 sm:mb-8 mb-4"
+                class="font-medium sm:text-5xl text-3xl text-gray-900 mt-5 sm:mb-8 mb-4 sm:text-center text-left"
               >
                 Selected Works
               </h3>
@@ -375,90 +457,154 @@
                 target="_blank"
                 href="https://www.behance.net/gallery/165818769/The-Digital-Network-Blockchain-B2B-Payments"
               >
-                <div class="project-card">
-                  <img
-                    class="rounded-2xl hover:rounded-lg sm:h-96 h-60 object-cover transition-all"
-                    src="./assets/img/the digital network.png"
-                    alt=""
-                  />
-                  <div class="flex flex-col gap-2">
+                <div class="project-card group">
+                  <div class="pcard-img-container">
+                    <img
+                      class="pcard-img group-hover:scale-105"
+                      src="./assets/img/the digital network.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="pcard-text">
                     <p class="title">Digital Banking Landing Page</p>
 
-                    <p class="text-lg font-semibold text-slate-500">
+                    <!-- <p class="text-lg font-semibold text-slate-500">
                       - The Digital Network
-                    </p>
+                    </p> -->
+                    <div class="flex gap-3">
+                      <span class="p-pill">Landing Page</span>
+                      <span class="p-pill">Web</span>
+                      <span class="p-pill">UI Design</span>
+                    </div>
                   </div>
                 </div>
               </a>
+
               <a
+                target="_blank"
                 href="https://www.behance.net/gallery/150873145/Wearit-Delivery-System"
-                target="_blank"
               >
-                <div class="project-card">
-                  <img
-                    class="rounded-2xl hover:rounded-lg sm:h-96 h-60 object-cover transition-all"
-                    src="./assets/img/wearitdelivery.png"
-                    alt=""
-                  />
-                  <div class="flex flex-col gap-2">
-                    <p class="title">Ecommerce Delivery system</p>
-                    <p class="text-lg font-semibold text-slate-500">- Wearit</p>
+                <div class="project-card group">
+                  <div class="pcard-img-container">
+                    <img
+                      class="pcard-img group-hover:scale-105"
+                      src="./assets/img/wearitdelivery.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="pcard-text">
+                    <p class="title">Wearit - Ecommerce Delivery system</p>
+
+                    <!-- <p class="text-lg font-semibold text-slate-500">
+                    - The Digital Network
+                  </p> -->
+                    <div class="flex gap-3">
+                      <span class="p-pill">App Design</span>
+                      <span class="p-pill">Mobile</span>
+                      <!-- <span class="p-pill">UI Design</span> -->
+                    </div>
                   </div>
                 </div>
               </a>
+
               <a
+                target="_blank"
                 href="https://www.behance.net/gallery/160078341/Kookit-Food-delivery-Mobile-App"
-                target="_blank"
               >
-                <div class="project-card">
-                  <img
-                    class="rounded-2xl hover:rounded-lg sm:h-96 h-60 object-cover transition-all"
-                    src="./assets/img/kookit.png"
-                    alt=""
-                  />
-                  <div class="flex flex-col gap-2">
-                    <p class="title">Food Delivery Mobiel App</p>
-                    <p class="text-lg font-semibold text-slate-500">- Kookit</p>
+                <div class="project-card group">
+                  <div class="pcard-img-container">
+                    <img
+                      class="pcard-img group-hover:scale-105"
+                      src="./assets/img/kookit.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="pcard-text">
+                    <p class="title">Kookit-Food Delivery App</p>
+
+                    <!-- <p class="text-lg font-semibold text-slate-500">
+                    - The Digital Network
+                  </p> -->
+                    <div class="flex gap-3">
+                      <span class="p-pill">App Design</span>
+                      <span class="p-pill">Mobile</span>
+                      <!-- <span class="p-pill">UI Design</span> -->
+                    </div>
                   </div>
                 </div>
               </a>
+
               <a
-                href="https://www.behance.net/gallery/146880565/Wearit-Ecommerce-Mobile-App"
                 target="_blank"
+                href="https://www.behance.net/gallery/146880565/Wearit-Ecommerce-Mobile-App"
               >
-                <div class="project-card">
-                  <img
-                    class="rounded-2xl hover:rounded-lg sm:h-96 h-60 object-cover transition-all"
-                    src="./assets/img/wearitecommerce.png"
-                    alt=""
-                  />
-                  <div class="flex flex-col gap-2">
-                    <p class="title">Ecommerce mobile app</p>
-                    <p class="text-lg font-semibold text-slate-500">- Wearit</p>
+                <div class="project-card group">
+                  <div class="pcard-img-container">
+                    <img
+                      class="pcard-img group-hover:scale-105"
+                      src="./assets/img/wearitecommerce.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="pcard-text">
+                    <p class="title">Wearit-Ecommerce Mobile App</p>
+
+                    <!-- <p class="text-lg font-semibold text-slate-500">
+                  - The Digital Network
+                </p> -->
+                    <div class="flex gap-3">
+                      <span class="p-pill">App Design</span>
+                      <span class="p-pill">Mobile</span>
+                      <!-- <span class="p-pill">UI Design</span> -->
+                    </div>
                   </div>
                 </div>
               </a>
-              <a href="">
-                <div class="project-card">
-                  <img
-                    class="rounded-2xl hover:rounded-lg sm:h-96 h-60 object-cover transition-all"
-                    src="./assets/img/reserviz.png"
-                    alt=""
-                  />
-                  <div class="flex flex-col gap-2">
-                    <p class="title">Booking Chatbot integration system</p>
-                    <p class="text-lg font-semibold text-slate-500">
-                      - Reserviz
-                    </p>
+
+              <a href="#">
+                <div class="project-card group custor-auto">
+                  <div class="pcard-img-container">
+                    <img
+                      class="pcard-img group-hover:scale-none"
+                      src="./assets/img/reserviz.png"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="pcard-text">
+                    <p class="title">Reserviz- Booking Chatbot System</p>
+
+                    <!-- <p class="text-lg font-semibold text-slate-500">
+                - The Digital Network
+              </p> -->
+                    <div class="flex gap-3">
+                      <span class="p-pill">UI Design</span>
+                      <span class="p-pill">Plugin</span>
+                      <!-- <span class="p-pill">UI Design</span> -->
+                    </div>
                   </div>
                 </div>
               </a>
             </div>
           </div>
 
-          <section class="bg-white dark:bg-gray-900">
+          <section class="py-40 sm:py-16"">
+            <div class="pb-6">
+              <p class="uppercase sm:text-center text-left text-slate-600">
+                Testimonial
+              </p>
+              <h3
+                class="font-medium sm:text-5xl text-3xl text-gray-900 mt-5 sm:mb-8 mb-4 sm:text-center text-left capitalize"
+              >
+                What is everyone saying
+              </h3>
+            </div>
             <div
-              class="max-w-screen-xl py-8 mx-auto text-center lg:py-16 lg:px-6"
+              class="max-w-screen-xl mx-auto text-center "
             >
               <figure class="max-w-screen-md mx-auto">
                 <svg
@@ -541,7 +687,7 @@
                   </div>
 
                   <p
-                    class="sm:text-xl text-base font-medium text-gray-900 dark:text-white text-justify"
+                    class="sm:text-xl text-base font-regular text-gray-700 dark:text-white text-justify"
                   >
                     "Abdullah's UI/UX work is simply beautiful AND it makes
                     sense. He has a true eye for his craft. He entirely and
