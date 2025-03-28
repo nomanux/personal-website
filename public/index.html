@@ -52,9 +52,10 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
       defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+
     <script src="./assets/js/main.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   </head>
@@ -71,8 +72,7 @@
     gtag("config", "G-QKKNBXLGXC");
   </script>
   <body
-    x-data="global()"
-    x-init="themeInit()"
+    x-data="{ modalOpen: false, emailCopied: false, isMobileMenuOpen: false }"
     :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
   >
     <div class="absolute w-full h-screen top-0 left-0 right-0 z-0">
@@ -276,11 +276,12 @@
                 </div>
                 <div class="mt-8">
                   <div class="flex gap-4">
-                    <a
-                      href="mailto:hello@nomanux.com"
+                    <button
+                      @click="modalOpen = true"
                       class="inline-block rounded-xl sm:px-10 py-4 px-4 bg-white border border-slate-200 text-center font-body text-lg text-slate-800"
-                      >Ping Me</a
                     >
+                      Ping Me
+                    </button>
                     <a
                       target="_blank"
                       href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&t=bGHd2PXTMSHGDiGc-1"
@@ -391,7 +392,7 @@
                   </div>
                   <div class="pcard-text">
                     <p class="title">Digital Banking Landing Page</p>
-                    <div class="flex gap-3">
+                    <div class="flex gap-3 flex-wrap">
                       <span class="p-pill">Landing Page</span>
                       <span class="p-pill">Web</span>
                       <span class="p-pill">UI Design</span>
@@ -434,7 +435,7 @@
                   </div>
                   <div class="pcard-text">
                     <p class="title">Kookit-Food Delivery App</p>
-                    <div class="flex gap-3">
+                    <div class="flex gap-3 flex-wrap">
                       <span class="p-pill">App Design</span>
                       <span class="p-pill">Mobile</span>
                     </div>
@@ -473,7 +474,7 @@
                   </div>
                   <div class="pcard-text">
                     <p class="title">Reserviz- Booking Chatbot System</p>
-                    <div class="flex gap-3">
+                    <div class="flex gap-3 flex-wrap">
                       <span class="p-pill">UI Design</span>
                       <span class="p-pill">Plugin</span>
                     </div>
@@ -494,7 +495,7 @@
               </h3>
             </div>
             <div class="max-w-screen-xl mx-auto text-center">
-              <figure class="max-w-screen-md mx-auto">
+              <!-- <figure class="max-w-screen-md mx-auto">
                 <svg
                   class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
                   viewBox="0 0 24 27"
@@ -607,7 +608,77 @@
                     </div>
                   </div>
                 </figcaption>
-              </figure>
+              </figure> -->
+
+              <div
+                x-data="{ activeSlide: 0, testimonials: [
+                { text: `Abdullah's UI/UX work is simply beautiful AND it makes sense. He has a true eye for his craft. He entirely and immediately understood our needs and general requirements,and he redesigned the UI/UX of our application, resulting in a more coherent user experience. Big kudos to him for conceptualizing some new features we are experimenting with. We highly recommend Abdullah and will be hiring him for more work. Also, He is a very friendly man and works with the rest of our team nicely, he is a leader by nature, so he can lead a group of people to get the best of them. At last, all I can say is that Thank you Abdullah very much, and we will keep working with you for a very long time.`, name: 'Ibrahim Aloboudi', role: 'Founder at Thkee' },
+                { text: `I had the opportunity to work with Noman on the same team, where he served as a UI/UX Engineer. He has strong expertise in product design, with a particular focus on solving user problems and making precise decisions about product aesthetics, including color selection. 
+
+Noman is an attentive listener who carefully considers user needs and consistently delivers effective, user-centered solutions. His collaborative approach and ability to understand complex design challenges make him an excellent team player. 
+
+With his technical proficiency and problem-solving skills, Noman is a valuable asset to any team aiming to deliver practical and innovative design solutions.`, name: 'Sadia Absary Moitry', role: 'Project Coordinator || Certified ScrumMaster® (CSM®)' },
+                
+              ]}"
+                class="max-w-3xl mx-auto"
+              >
+                <div class="bg-white rounded-lg sm:p-8 p-6 relative">
+                  <svg
+                    class="h-12 mx-auto mb-3 text-gray-300"
+                    viewBox="0 0 24 27"
+                    fill="none"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    />
+                  </svg>
+
+                  <p
+                    class="sm:text-xl text-base text-gray-700 text-center mb-6 whitespace-normal break-words text-wrap"
+                    x-text="testimonials[activeSlide].text"
+                  ></p>
+
+                  <figcaption
+                    class="flex items-center justify-center mt-6 space-x-3 sm:flex-row flex-col"
+                  >
+                    <div
+                      class="font-semibold text-gray-900"
+                      x-text="testimonials[activeSlide].name"
+                    ></div>
+                    <div class="text-sm text-gray-500">
+                      — <span x-text="testimonials[activeSlide].role"></span>
+                    </div>
+                  </figcaption>
+
+                  <div class="flex justify-center mt-6">
+                    <template
+                      x-for="(slide, index) in testimonials"
+                      :key="index"
+                    >
+                      <button
+                        @click="activeSlide = index"
+                        class="h-3 w-3 mx-1 rounded-full"
+                        :class="activeSlide === index ? 'bg-green-500' : 'bg-gray-300'"
+                      ></button>
+                    </template>
+                  </div>
+
+                  <!-- Navigation -->
+                  <button
+                    @click="activeSlide = activeSlide === 0 ? testimonials.length - 1 : activeSlide - 1"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-500 hover:text-gray-800"
+                  >
+                    <i class="bx bx-chevron-left text-3xl"></i>
+                  </button>
+                  <button
+                    @click="activeSlide = activeSlide === testimonials.length - 1 ? 0 : activeSlide + 1"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-500 hover:text-gray-800"
+                  >
+                    <i class="bx bx-chevron-right text-3xl"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -638,6 +709,85 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal Overlay -->
+    <!-- Modal Overlay -->
+    <div
+      x-show="modalOpen"
+      x-cloak
+      class="fixed inset-0 bg-gray-900 bg-opacity-60 flex items-center justify-center z-50 px-4 backdrop-blur-sm"
+    >
+      <!-- Modal Container -->
+      <div
+        @click.away="modalOpen = false"
+        class="w-full max-w-2xl bg-white rounded-lg shadow-md relative mx-2"
+      >
+        <!-- Close Button -->
+        <button
+          @click="modalOpen = false"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        >
+          <svg
+            width="32"
+            height="33"
+            viewBox="0 0 32 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect y="0.5" width="32" height="32" rx="16" fill="#F1F5F9" />
+            <path
+              d="M10.0485 8.85147C9.5799 8.38284 8.8201 8.38284 8.35147 8.85147C7.88284 9.3201 7.88284 10.0799 8.35147 10.5485L14.3029 16.5L8.35147 22.4515C7.88284 22.9201 7.88284 23.6799 8.35147 24.1485C8.8201 24.6172 9.5799 24.6172 10.0485 24.1485L16 18.1971L21.9515 24.1485C22.4201 24.6172 23.1799 24.6172 23.6485 24.1485C24.1172 23.6799 24.1172 22.9201 23.6485 22.4515L17.6971 16.5L23.6485 10.5485C24.1172 10.0799 24.1172 9.3201 23.6485 8.85147C23.1799 8.38284 22.4201 8.38284 21.9515 8.85147L16 14.8029L10.0485 8.85147Z"
+              fill="#334155"
+            />
+          </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="sm:p-10 p-6">
+          <h2
+            class="text-5xl font-bold text-gray-800 mb-4 sm:text-7xl leading-normal"
+          >
+            Let's Chat! 👋
+          </h2>
+          <p
+            class="text-gray-600 mb-8 font-light sm:text-2xl text-xl leading-8"
+          >
+            <!-- Got questions, ideas, or just want to say hello? <br> -->
+            Drop me an email—I'd love to hear from you!
+          </p>
+
+          <!-- Email Address -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-between gap-4 text-lg"
+          >
+            <a
+              href="mailto:hello@nomanux.com"
+              class="px-4 sm:py-6 py-4 bg-slate-800 text-white rounded-xl transition-colors text-center text-xl sm:text-3xl w-full"
+            >
+              hello@nomanux.com
+            </a>
+
+            <!-- Copy Button -->
+            <button
+              @click="navigator.clipboard.writeText('hello@nomanux.com'); emailCopied = true; setTimeout(() => emailCopied = false, 2000);"
+              class="px-4 sm:py-6 py-4 border text-xl border-gray-300 text-gray-700 rounded-xl hover:bg-white transition w-full sm:w-auto"
+            >
+              <span
+                class="w-28 inline sm:block text-center"
+                x-show="!emailCopied"
+                >Copy Mail</span
+              >
+              <span
+                class="w-28 inline sm:block text-center text-blue-600"
+                x-show="emailCopied"
+                >Copied!</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="/assets/js/main.js"></script>
   </body>
 </html>
