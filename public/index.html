@@ -38,6 +38,13 @@
       content="Noman: UI/UX expert crafting user-friendly wonders. Elevate product experiences with seamless design and collaborative brilliance."
     />
     <meta property="twitter:image" content="./assets/img/noman523.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -73,7 +80,7 @@
   </script>
   <body
     x-data="{ modalOpen: false, emailCopied: false, isMobileMenuOpen: false }"
-    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
+    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative font-inter' : ''"
   >
     <div class="absolute w-full h-screen top-0 left-0 right-0 z-0">
       <img src="./assets/img/herobg.svg" alt="" class="object-none" />
@@ -172,7 +179,7 @@
       >
         <div class="ml-auto w-2/3 px-4 py-5 md:w-1/3 bg-slate-900">
           <i
-            class="bx bx-x absolute top-0 right-0 mt-7 mr-4 text-4xl text-white"
+            class="bx bx-x absolute top-0 right-0 mt-8 mr-5 text-4xl text-white"
             @click="isMobileMenuOpen = false"
           ></i>
           <ul class="mt-20 flex flex-col gap-8 text-white">
@@ -237,15 +244,13 @@
                 <h1
                   class="font-normal text-4xl md:text-5xl lg:text-7xl text-gray-500 tracking-tight capitalize"
                 >
-                  <span
-                    class="font-bold mt-3 block text-gray-800 leading-[1.3]"
-                  >
+                  <span class="font-bold block text-gray-800 leading-[1.3]">
                     <span
-                      class="bg-gradient-to-r from-sky-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-semibold"
+                      class="bg-gradient-to-r from-sky-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-bold"
                       >Product Designer</span
                     >
                     <br />
-                    Who crafting digital experiences.
+                    solving real problems with SaaS.
                   </span>
                 </h1>
                 <div class="flex gap-2 items-center text-gray-00 mt-2 hidden">
@@ -275,17 +280,17 @@
                   <p class="mb-0 text-lg text-yellow-600">Dhaka, Bangladesh</p>
                 </div>
                 <div class="sm:mt-8 mt-4">
-                  <div class="flex gap-4">
+                  <div class="flex sm:gap-4 gap-3">
                     <button
                       @click="modalOpen = true"
-                      class="inline-block rounded-xl sm:px-10 py-2 sm:py-4 px-4 bg-white border border-slate-200 text-center font-body text-lg text-slate-800"
+                      class="inline-block rounded-xl sm:px-10 py-3 sm:py-4 px-4 bg-white border border-slate-200 text-center font-body text-lg text-slate-800"
                     >
                       Ping Me
                     </button>
                     <a
                       target="_blank"
                       href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&t=bGHd2PXTMSHGDiGc-1"
-                      class="flex items-center justify-center gap-2 rounded-xl sm:px-10 sm:py-4 py-2 px-4 font-body bg-[#1C2D41] text-lg font-medium text-white"
+                      class="flex items-center justify-center gap-2 rounded-xl sm:px-10 sm:py-4 py-3 px-4 font-body bg-[#1C2D41] text-lg text-white"
                       ><svg
                         width="24"
                         height="24"
@@ -314,21 +319,19 @@
                           fill="#B659FF"
                         />
                       </svg>
-
-                      View Portfolio<span>
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M17.6559 6.3434C17.8434 6.53096 17.9487 6.78531 17.9486 7.05051L17.9486 15.5358C17.9441 15.798 17.8367 16.0478 17.6497 16.2316C17.4627 16.4154 17.211 16.5184 16.9488 16.5184C16.6866 16.5184 16.4349 16.4154 16.2479 16.2316C16.0608 16.0478 15.9535 15.798 15.9489 15.5358L15.9489 9.46457L7.75641 17.6571C7.56887 17.8446 7.31452 17.95 7.0493 17.95C6.78408 17.95 6.52973 17.8446 6.34219 17.6571C6.15466 17.4696 6.0493 17.2152 6.0493 16.95C6.0493 16.6848 6.15466 16.4304 6.34219 16.2429L14.5347 8.05036L8.46351 8.05036C8.20135 8.0458 7.95146 7.93846 7.76767 7.75144C7.58388 7.56443 7.48089 7.31272 7.48089 7.05051C7.48089 6.7883 7.58388 6.53659 7.76767 6.34957C7.95146 6.16256 8.20135 6.05522 8.46351 6.05066L16.9488 6.05066C17.214 6.05062 17.4683 6.15592 17.6559 6.3434Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </span>
+                      <span> View Portfolio </span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.6559 6.3434C17.8434 6.53096 17.9487 6.78531 17.9486 7.05051L17.9486 15.5358C17.9441 15.798 17.8367 16.0478 17.6497 16.2316C17.4627 16.4154 17.211 16.5184 16.9488 16.5184C16.6866 16.5184 16.4349 16.4154 16.2479 16.2316C16.0608 16.0478 15.9535 15.798 15.9489 15.5358L15.9489 9.46457L7.75641 17.6571C7.56887 17.8446 7.31452 17.95 7.0493 17.95C6.78408 17.95 6.52973 17.8446 6.34219 17.6571C6.15466 17.4696 6.0493 17.2152 6.0493 16.95C6.0493 16.6848 6.15466 16.4304 6.34219 16.2429L14.5347 8.05036L8.46351 8.05036C8.20135 8.0458 7.95146 7.93846 7.76767 7.75144C7.58388 7.56443 7.48089 7.31272 7.48089 7.05051C7.48089 6.7883 7.58388 6.53659 7.76767 6.34957C7.95146 6.16256 8.20135 6.05522 8.46351 6.05066L16.9488 6.05066C17.214 6.05062 17.4683 6.15592 17.6559 6.3434Z"
+                          fill="white"
+                        />
+                      </svg>
                     </a>
                   </div>
                 </div>
@@ -380,26 +383,26 @@
             <div class="grid sm:grid-cols-2 grid-cols-1 gap-16">
               <a
                 target="_blank"
-                href="https://www.behance.net/gallery/165818769/The-Digital-Network-Blockchain-B2B-Payments"
+                href="https://www.behance.net/gallery/146880565/Wearit-Ecommerce-Mobile-App"
               >
                 <div class="project-card group">
                   <div class="pcard-img-container">
                     <img
                       class="pcard-img group-hover:scale-105"
-                      src="./assets/img/the digital network.png"
+                      src="./assets/img/wearitecommerce.png"
                       alt=""
                     />
                   </div>
                   <div class="pcard-text">
-                    <p class="title">Digital Banking Landing Page</p>
-                    <div class="flex gap-3 flex-wrap">
-                      <span class="p-pill">Landing Page</span>
-                      <span class="p-pill">Web</span>
-                      <span class="p-pill">UI Design</span>
+                    <p class="title">Wearit-Ecommerce Mobile App</p>
+                    <div class="flex gap-3">
+                      <span class="p-pill">App Design</span>
+                      <span class="p-pill">Mobile</span>
                     </div>
                   </div>
                 </div>
               </a>
+
               <a
                 target="_blank"
                 href="https://www.behance.net/gallery/150873145/Wearit-Delivery-System"
@@ -444,26 +447,27 @@
               </a>
               <a
                 target="_blank"
-                href="https://www.behance.net/gallery/146880565/Wearit-Ecommerce-Mobile-App"
+                href="https://www.behance.net/gallery/165818769/The-Digital-Network-Blockchain-B2B-Payments"
               >
                 <div class="project-card group">
                   <div class="pcard-img-container">
                     <img
                       class="pcard-img group-hover:scale-105"
-                      src="./assets/img/wearitecommerce.png"
+                      src="./assets/img/the digital network.png"
                       alt=""
                     />
                   </div>
                   <div class="pcard-text">
-                    <p class="title">Wearit-Ecommerce Mobile App</p>
-                    <div class="flex gap-3">
-                      <span class="p-pill">App Design</span>
-                      <span class="p-pill">Mobile</span>
+                    <p class="title">Digital Banking Landing Page</p>
+                    <div class="flex gap-3 flex-wrap">
+                      <span class="p-pill">Landing Page</span>
+                      <span class="p-pill">Web</span>
+                      <span class="p-pill">UI Design</span>
                     </div>
                   </div>
                 </div>
               </a>
-              <a href="#">
+              <a>
                 <div class="project-card group custor-auto">
                   <div class="pcard-img-container">
                     <img
