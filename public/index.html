@@ -88,13 +88,13 @@
     <div id="main" class="mx-auto max-w-7xl px-2 relative">
       <div class="container sticky top-4 z-30 mx-auto w-full">
         <div
-          class="flex items-center justify-between bg-gray-100/90 py-4 sm:py-6 sm:mt-6 backdrop-blur rounded-2xl px-5"
+          class="flex items-center justify-between bg-gray-100/90 py-3 sm:py-4 sm:mt-6 backdrop-blur rounded-xl sm:px-5 px-3"
         >
           <a href="index.html" class="flex items-center">
             <img
               src="./assets/img/noman-logo.svg"
               alt="Abdullah AL Noman"
-              class="sm:h-11 sm:w-11 h-10 w-10"
+              class="sm:h-11 sm:w-auto h-8 w-auto"
             />
             <span class="mr-2 hidden">
               <p class="font-semibold text-2xl text-slate-800">
@@ -128,7 +128,7 @@
             </span>
             <p class="hidden font-body text-2xl font-bold lg:block"></p>
           </a>
-          <div class="flex items-center lg:hidden">
+          <div class="grid place-items-center lg:hidden w-8 h-8">
             <svg
               width="24"
               height="15"
@@ -179,7 +179,7 @@
       >
         <div class="ml-auto w-2/3 px-4 py-5 md:w-1/3 bg-slate-900">
           <i
-            class="bx bx-x absolute top-0 right-0 mt-8 mr-5 text-4xl text-white"
+            class="bx bx-x absolute top-0 right-0 mt-6 mr-4 text-4xl text-white"
             @click="isMobileMenuOpen = false"
           ></i>
           <ul class="mt-20 flex flex-col gap-8 text-white">
@@ -231,7 +231,7 @@
             class="flex flex-col sm:gap-12 gap-8 sm:flex sm:flex-row justify-between sm:min-h-[700px] min-h-[500px] sm:mt-0 mt-5"
           >
             <div
-              class="sm:w-4/6 w-full flex flex-col items-center justify-center sm:mt-0 mt-6"
+              class="sm:w-4/6 w-full flex flex-col items-center justify-center sm:mt-0 mt-5"
             >
               <div class="flex flex-col gap-2">
                 <h1
@@ -246,14 +246,14 @@
                 >
                   <span class="font-bold block text-gray-800 leading-[1.3]">
                     <span
-                      class="bg-gradient-to-r from-sky-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text font-bold"
+                      class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-500 inline-block text-transparent bg-clip-text font-bold"
                       >Product Designer</span
                     >
                     <br />
                     solving real problems with SaaS.
                   </span>
                 </h1>
-                <div class="flex gap-2 items-center text-gray-00 mt-2 hidden">
+                <div class="gap-2 items-center text-gray-00 mt-2 hidden">
                   <div class="text-yellow-600">
                     <svg
                       class="h-6 w-6"
@@ -370,17 +370,40 @@
             </div>
           </div>
           <div class="py-24 pt-40 sm:py-16">
-            <div class="pb-6">
-              <p class="uppercase sm:text-center text-left text-slate-600">
-                My Works
-              </p>
-              <h3
-                class="font-medium sm:text-5xl text-3xl text-gray-900 mt-5 sm:mb-8 mb-4 sm:text-center text-left"
+            <div class="text-center mb-10">
+              <span
+                class="uppercase text-sm font-semibold tracking-widest text-green-600"
+                >My Works</span
               >
+              <h2 class="mt-3 text-3xl sm:text-6xl font-bold text-gray-800">
                 Selected Works
-              </h3>
+              </h2>
             </div>
-            <div class="grid sm:grid-cols-2 grid-cols-1 gap-16">
+
+            <div class="grid sm:grid-cols-2 grid-cols-1 gap-16 sm:py-12 py-4">
+              <a
+                target="_blank"
+                href="https://www.behance.net/gallery/194296419/Redesign-Star-Cineplex-Ticket-booking-Case-Study"
+              >
+                <div class="project-card group">
+                  <div class="pcard-img-container">
+                    <img
+                      class="pcard-img group-hover:scale-105"
+                      src="./assets/img/star-cineplex.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="pcard-text">
+                    <p class="title">Movie ticket booking Case Study</p>
+                    <div class="flex gap-3 flex-wrap">
+                      <span class="p-pill">Case Study</span>
+                      <span class="p-pill">Redesign</span>
+                      <span class="p-pill">Mobile App</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
               <a
                 target="_blank"
                 href="https://www.behance.net/gallery/146880565/Wearit-Ecommerce-Mobile-App"
@@ -487,200 +510,109 @@
               </a>
             </div>
           </div>
-          <section class="py-40 sm:py-16">
-            <div class="pb-6">
-              <p class="uppercase sm:text-center text-left text-slate-600">
-                Testimonial
-              </p>
-              <h3
-                class="font-medium sm:text-5xl text-3xl text-gray-900 mt-5 sm:mb-8 mb-4 sm:text-center text-left capitalize"
+          <section class="py-16 sm:py-24">
+            <div class="text-center mb-10">
+              <span
+                class="uppercase text-sm font-semibold tracking-widest text-green-600"
+                >Testimonials</span
               >
-                What is everyone saying
-              </h3>
+              <h2 class="mt-3 text-3xl sm:text-6xl font-bold text-gray-800">
+                What People Are Saying
+              </h2>
             </div>
-            <div class="max-w-screen-xl mx-auto text-center">
-              <!-- <figure class="max-w-screen-md mx-auto">
+
+            <div
+              class="max-w-3xl mx-auto"
+              x-data="{
+                  activeSlide: 0,
+                  testimonials: [
+                    {
+                      text: `Abdullah's UI/UX work is simply beautiful AND it makes sense. He has a true eye for his craft. He entirely and immediately understood our needs and general requirements,and he redesigned the UI/UX of our application, resulting in a more coherent user experience. Big kudos to him for conceptualizing some new features we are experimenting with. We highly recommend Abdullah and will be hiring him for more work. Also, He is a very friendly man and works with the rest of our team nicely, he is a leader by nature, so he can lead a group of people to get the best of them. At last, all I can say is that Thank you Abdullah very much, and we will keep working with you for a very long time.`,
+                      name: 'Ibrahim Aloboudi',
+                      role: 'Founder, Thkee'
+                    },
+                    {
+                      text: `I had the opportunity to work with Noman on the same team, where he served as a UI/UX Engineer. He has strong expertise in product design, with a particular focus on solving user problems and making precise decisions about product aesthetics, including color selection. Noman is an attentive listener who carefully considers user needs and consistently delivers effective, user-centered solutions. His collaborative approach and ability to understand complex design challenges make him an excellent team player. With his technical proficiency and problem-solving skills, Noman is a valuable asset to any team aiming to deliver practical and innovative design solutions.`,
+                      name: 'Sadia Absary Moitry',
+                      role: 'Project Coordinator & CSM®'
+                    }
+                  ]
+                }"
+            >
+              <div class="relative p-8 sm:p-12">
                 <svg
-                  class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                  class="w-12 h-12 text-green-500 mx-auto mb-4"
+                  fill="currentColor"
                   viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
                   />
                 </svg>
-                <blockquote>
-                  <div class="flex items-center justify-center mb-6">
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21.9852 10.7232L17.7571 14.4132L19.0236 19.9069C19.0906 20.1941 19.0715 20.4947 18.9686 20.7711C18.8658 21.0475 18.6837 21.2874 18.4452 21.4609C18.2067 21.6344 17.9223 21.7337 17.6277 21.7464C17.3331 21.7592 17.0412 21.6848 16.7886 21.5326L11.9971 18.6263L7.2158 21.5326C6.96321 21.6848 6.67135 21.7592 6.37671 21.7464C6.08208 21.7337 5.79773 21.6344 5.55923 21.4609C5.32074 21.2874 5.13866 21.0475 5.03578 20.7711C4.9329 20.4947 4.91378 20.1941 4.9808 19.9069L6.24549 14.4188L2.01643 10.7232C1.79275 10.5303 1.631 10.2756 1.55148 9.99113C1.47195 9.70666 1.47819 9.40504 1.5694 9.1241C1.66061 8.84315 1.83274 8.59539 2.0642 8.41188C2.29566 8.22838 2.57615 8.11729 2.87049 8.09256L8.44486 7.60974L10.6208 2.41974C10.7344 2.14742 10.9261 1.9148 11.1717 1.75117C11.4172 1.58755 11.7057 1.50024 12.0008 1.50024C12.2959 1.50024 12.5844 1.58755 12.8299 1.75117C13.0755 1.9148 13.2672 2.14742 13.3808 2.41974L15.5633 7.60974L21.1358 8.09256C21.4301 8.11729 21.7106 8.22838 21.9421 8.41188C22.1736 8.59539 22.3457 8.84315 22.4369 9.1241C22.5281 9.40504 22.5343 9.70666 22.4548 9.99113C22.3753 10.2756 22.2135 10.5303 21.9899 10.7232H21.9852Z"
-                        fill="#00CE6B"
-                      />
-                    </svg>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21.9852 10.7232L17.7571 14.4132L19.0236 19.9069C19.0906 20.1941 19.0715 20.4947 18.9686 20.7711C18.8658 21.0475 18.6837 21.2874 18.4452 21.4609C18.2067 21.6344 17.9223 21.7337 17.6277 21.7464C17.3331 21.7592 17.0412 21.6848 16.7886 21.5326L11.9971 18.6263L7.2158 21.5326C6.96321 21.6848 6.67135 21.7592 6.37671 21.7464C6.08208 21.7337 5.79773 21.6344 5.55923 21.4609C5.32074 21.2874 5.13866 21.0475 5.03578 20.7711C4.9329 20.4947 4.91378 20.1941 4.9808 19.9069L6.24549 14.4188L2.01643 10.7232C1.79275 10.5303 1.631 10.2756 1.55148 9.99113C1.47195 9.70666 1.47819 9.40504 1.5694 9.1241C1.66061 8.84315 1.83274 8.59539 2.0642 8.41188C2.29566 8.22838 2.57615 8.11729 2.87049 8.09256L8.44486 7.60974L10.6208 2.41974C10.7344 2.14742 10.9261 1.9148 11.1717 1.75117C11.4172 1.58755 11.7057 1.50024 12.0008 1.50024C12.2959 1.50024 12.5844 1.58755 12.8299 1.75117C13.0755 1.9148 13.2672 2.14742 13.3808 2.41974L15.5633 7.60974L21.1358 8.09256C21.4301 8.11729 21.7106 8.22838 21.9421 8.41188C22.1736 8.59539 22.3457 8.84315 22.4369 9.1241C22.5281 9.40504 22.5343 9.70666 22.4548 9.99113C22.3753 10.2756 22.2135 10.5303 21.9899 10.7232H21.9852Z"
-                        fill="#00CE6B"
-                      />
-                    </svg>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21.9852 10.7232L17.7571 14.4132L19.0236 19.9069C19.0906 20.1941 19.0715 20.4947 18.9686 20.7711C18.8658 21.0475 18.6837 21.2874 18.4452 21.4609C18.2067 21.6344 17.9223 21.7337 17.6277 21.7464C17.3331 21.7592 17.0412 21.6848 16.7886 21.5326L11.9971 18.6263L7.2158 21.5326C6.96321 21.6848 6.67135 21.7592 6.37671 21.7464C6.08208 21.7337 5.79773 21.6344 5.55923 21.4609C5.32074 21.2874 5.13866 21.0475 5.03578 20.7711C4.9329 20.4947 4.91378 20.1941 4.9808 19.9069L6.24549 14.4188L2.01643 10.7232C1.79275 10.5303 1.631 10.2756 1.55148 9.99113C1.47195 9.70666 1.47819 9.40504 1.5694 9.1241C1.66061 8.84315 1.83274 8.59539 2.0642 8.41188C2.29566 8.22838 2.57615 8.11729 2.87049 8.09256L8.44486 7.60974L10.6208 2.41974C10.7344 2.14742 10.9261 1.9148 11.1717 1.75117C11.4172 1.58755 11.7057 1.50024 12.0008 1.50024C12.2959 1.50024 12.5844 1.58755 12.8299 1.75117C13.0755 1.9148 13.2672 2.14742 13.3808 2.41974L15.5633 7.60974L21.1358 8.09256C21.4301 8.11729 21.7106 8.22838 21.9421 8.41188C22.1736 8.59539 22.3457 8.84315 22.4369 9.1241C22.5281 9.40504 22.5343 9.70666 22.4548 9.99113C22.3753 10.2756 22.2135 10.5303 21.9899 10.7232H21.9852Z"
-                        fill="#00CE6B"
-                      />
-                    </svg>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21.9852 10.7232L17.7571 14.4132L19.0236 19.9069C19.0906 20.1941 19.0715 20.4947 18.9686 20.7711C18.8658 21.0475 18.6837 21.2874 18.4452 21.4609C18.2067 21.6344 17.9223 21.7337 17.6277 21.7464C17.3331 21.7592 17.0412 21.6848 16.7886 21.5326L11.9971 18.6263L7.2158 21.5326C6.96321 21.6848 6.67135 21.7592 6.37671 21.7464C6.08208 21.7337 5.79773 21.6344 5.55923 21.4609C5.32074 21.2874 5.13866 21.0475 5.03578 20.7711C4.9329 20.4947 4.91378 20.1941 4.9808 19.9069L6.24549 14.4188L2.01643 10.7232C1.79275 10.5303 1.631 10.2756 1.55148 9.99113C1.47195 9.70666 1.47819 9.40504 1.5694 9.1241C1.66061 8.84315 1.83274 8.59539 2.0642 8.41188C2.29566 8.22838 2.57615 8.11729 2.87049 8.09256L8.44486 7.60974L10.6208 2.41974C10.7344 2.14742 10.9261 1.9148 11.1717 1.75117C11.4172 1.58755 11.7057 1.50024 12.0008 1.50024C12.2959 1.50024 12.5844 1.58755 12.8299 1.75117C13.0755 1.9148 13.2672 2.14742 13.3808 2.41974L15.5633 7.60974L21.1358 8.09256C21.4301 8.11729 21.7106 8.22838 21.9421 8.41188C22.1736 8.59539 22.3457 8.84315 22.4369 9.1241C22.5281 9.40504 22.5343 9.70666 22.4548 9.99113C22.3753 10.2756 22.2135 10.5303 21.9899 10.7232H21.9852Z"
-                        fill="#00CE6B"
-                      />
-                    </svg>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21.9852 10.7232L17.7571 14.4132L19.0236 19.9069C19.0906 20.1941 19.0715 20.4947 18.9686 20.7711C18.8658 21.0475 18.6837 21.2874 18.4452 21.4609C18.2067 21.6344 17.9223 21.7337 17.6277 21.7464C17.3331 21.7592 17.0412 21.6848 16.7886 21.5326L11.9971 18.6263L7.2158 21.5326C6.96321 21.6848 6.67135 21.7592 6.37671 21.7464C6.08208 21.7337 5.79773 21.6344 5.55923 21.4609C5.32074 21.2874 5.13866 21.0475 5.03578 20.7711C4.9329 20.4947 4.91378 20.1941 4.9808 19.9069L6.24549 14.4188L2.01643 10.7232C1.79275 10.5303 1.631 10.2756 1.55148 9.99113C1.47195 9.70666 1.47819 9.40504 1.5694 9.1241C1.66061 8.84315 1.83274 8.59539 2.0642 8.41188C2.29566 8.22838 2.57615 8.11729 2.87049 8.09256L8.44486 7.60974L10.6208 2.41974C10.7344 2.14742 10.9261 1.9148 11.1717 1.75117C11.4172 1.58755 11.7057 1.50024 12.0008 1.50024C12.2959 1.50024 12.5844 1.58755 12.8299 1.75117C13.0755 1.9148 13.2672 2.14742 13.3808 2.41974L15.5633 7.60974L21.1358 8.09256C21.4301 8.11729 21.7106 8.22838 21.9421 8.41188C22.1736 8.59539 22.3457 8.84315 22.4369 9.1241C22.5281 9.40504 22.5343 9.70666 22.4548 9.99113C22.3753 10.2756 22.2135 10.5303 21.9899 10.7232H21.9852Z"
-                        fill="#00CE6B"
-                      />
-                    </svg>
-                  </div>
-                  <p
-                    class="sm:text-xl text-base font-regular text-gray-700 dark:text-white text-justify"
-                  >
-                    "Abdullah's UI/UX work is simply beautiful AND it makes
-                    sense. He has a true eye for his craft. He entirely and
-                    immediately understood our needs and general requirements,
-                    and he redesigned the UI/UX of our application, resulting in
-                    a more coherent user experience. Big kudos to him for
-                    conceptualizing some new features we are experimenting with.
-                    We highly recommend Abdullah and will be hiring him for more
-                    work. Also, He is a very friendly man and works with the
-                    rest of our team nicely, he is a leader by nature, so he can
-                    lead a group of people to get the best of them. <br />
-                    At last, all I can say is that Thank you Abdullah very much,
-                    and we will keep working with you for a very long time."
-                  </p>
-                </blockquote>
-                <figcaption
-                  class="flex items-center justify-center mt-12 space-x-3"
+
+                <p
+                  class="text-gray-700 sm:text-lg leading-relaxed text-center"
+                  x-text="testimonials[activeSlide].text"
+                ></p>
+
+                <div
+                  class="mt-6 flex flex-col sm:flex-row justify-center items-center gap-2"
                 >
-                  <img
-                    class="w-6 h-6 rounded-full"
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
-                    alt="profile picture"
-                  />
-                  <div
-                    class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
-                  >
-                    <div class="pr-3 font-medium text-gray-900 dark:text-white">
-                      Ibrahim Aloboudi
-                    </div>
-                    <div
-                      class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
-                    >
-                      Founder at <a href="#">Thkee</a>
-                    </div>
-                  </div>
-                </figcaption>
-              </figure> -->
+                  <span
+                    class="text-gray-900 font-semibold"
+                    x-text="testimonials[activeSlide].name"
+                  ></span>
+                  <span class="text-gray-500"
+                    >— <span x-text="testimonials[activeSlide].role"></span
+                  ></span>
+                </div>
 
-              <div
-                x-data="{ activeSlide: 0, testimonials: [
-                { text: `Abdullah's UI/UX work is simply beautiful AND it makes sense. He has a true eye for his craft. He entirely and immediately understood our needs and general requirements,and he redesigned the UI/UX of our application, resulting in a more coherent user experience. Big kudos to him for conceptualizing some new features we are experimenting with. We highly recommend Abdullah and will be hiring him for more work. Also, He is a very friendly man and works with the rest of our team nicely, he is a leader by nature, so he can lead a group of people to get the best of them. At last, all I can say is that Thank you Abdullah very much, and we will keep working with you for a very long time.`, name: 'Ibrahim Aloboudi', role: 'Founder at Thkee' },
-                { text: `I had the opportunity to work with Noman on the same team, where he served as a UI/UX Engineer. He has strong expertise in product design, with a particular focus on solving user problems and making precise decisions about product aesthetics, including color selection. 
-
-Noman is an attentive listener who carefully considers user needs and consistently delivers effective, user-centered solutions. His collaborative approach and ability to understand complex design challenges make him an excellent team player. 
-
-With his technical proficiency and problem-solving skills, Noman is a valuable asset to any team aiming to deliver practical and innovative design solutions.`, name: 'Sadia Absary Moitry', role: 'Project Coordinator || Certified ScrumMaster® (CSM®)' },
-                
-              ]}"
-                class="max-w-3xl mx-auto"
-              >
-                <div class="bg-white rounded-lg sm:p-8 p-6 relative">
+                <button
+                  @click="activeSlide = activeSlide === 0 ? testimonials.length - 1 : activeSlide - 1"
+                  class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition"
+                >
                   <svg
-                    class="h-12 mx-auto mb-3 text-gray-300"
-                    viewBox="0 0 24 27"
+                    class="h-8 w-8"
                     fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
                     <path
-                      fill="currentColor"
-                      d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
                     />
                   </svg>
+                </button>
 
-                  <p
-                    class="sm:text-xl text-base text-gray-700 text-center mb-6 whitespace-normal break-words text-wrap"
-                    x-text="testimonials[activeSlide].text"
-                  ></p>
-
-                  <figcaption
-                    class="flex items-center justify-center mt-6 space-x-3 sm:flex-row flex-col"
+                <button
+                  @click="activeSlide = activeSlide === testimonials.length - 1 ? 0 : activeSlide + 1"
+                  class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition"
+                >
+                  <svg
+                    class="h-8 w-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    <div
-                      class="font-semibold text-gray-900"
-                      x-text="testimonials[activeSlide].name"
-                    ></div>
-                    <div class="text-sm text-gray-500">
-                      — <span x-text="testimonials[activeSlide].role"></span>
-                    </div>
-                  </figcaption>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
 
-                  <div class="flex justify-center mt-6">
-                    <template
-                      x-for="(slide, index) in testimonials"
-                      :key="index"
-                    >
-                      <button
-                        @click="activeSlide = index"
-                        class="h-3 w-3 mx-1 rounded-full"
-                        :class="activeSlide === index ? 'bg-green-500' : 'bg-gray-300'"
-                      ></button>
-                    </template>
-                  </div>
-
-                  <!-- Navigation -->
-                  <button
-                    @click="activeSlide = activeSlide === 0 ? testimonials.length - 1 : activeSlide - 1"
-                    class="absolute top-1/2 left-0 transform -translate-y-1/2 text-gray-500 hover:text-gray-800"
-                  >
-                    <i class="bx bx-chevron-left text-3xl"></i>
-                  </button>
-                  <button
-                    @click="activeSlide = activeSlide === testimonials.length - 1 ? 0 : activeSlide + 1"
-                    class="absolute top-1/2 right-0 transform -translate-y-1/2 text-gray-500 hover:text-gray-800"
-                  >
-                    <i class="bx bx-chevron-right text-3xl"></i>
-                  </button>
+                <div class="flex justify-center gap-2 mt-8">
+                  <template x-for="(slide, index) in testimonials" :key="index">
+                    <button
+                      @click="activeSlide = index"
+                      class="w-3 h-3 rounded-full"
+                      :class="activeSlide === index ? 'bg-green-500' : 'bg-gray-300'"
+                    ></button>
+                  </template>
                 </div>
               </div>
             </div>
