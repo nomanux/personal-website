@@ -80,7 +80,7 @@
   </script>
   <body
     x-data="{ modalOpen: false, emailCopied: false, isMobileMenuOpen: false }"
-    :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative font-inter' : ''"
+    :class="(modalOpen || isMobileMenuOpen) ? 'overflow-hidden pr-[calc(100vw-100%)]' : ''"
   >
     <div class="absolute w-full h-screen top-0 left-0 right-0 z-0">
       <img src="./assets/img/herobg.svg" alt="" class="object-none" />
@@ -843,76 +843,101 @@
     </div>
 
     <!-- Modal Overlay -->
-    <!-- Modal Overlay -->
     <div
       x-show="modalOpen"
       x-cloak
-      class="fixed inset-0 bg-gray-900 bg-opacity-60 flex items-center justify-center z-50 px-4 backdrop-blur-sm"
+      x-on:keydown.escape.prevent.stop="modalOpen = false"
+      role="dialog"
+      aria-modal="true"
+      x-id="['modal-title']"
+      :aria-labelledby="$id('modal-title')"
+      class="fixed inset-0 z-50 overflow-y-auto"
     >
+      <!-- Overlay Background -->
+      <div
+        x-show="modalOpen"
+        x-transition.opacity.duration.300
+        class="fixed inset-0 bg-gray-900 bg-opacity-60 backdrop-blur-sm"
+      ></div>
+
       <!-- Modal Container -->
       <div
-        @click.away="modalOpen = false"
-        class="w-full max-w-3xl bg-white rounded-2xl shadow-md relative mx-2"
+        x-show="modalOpen"
+        x-transition:enter="ease-out duration-300"
+        x-transition:enter-start="opacity-0 translate-y-4"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="ease-in duration-200"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-4"
+        x-on:click.self="modalOpen = false"
+        class="flex items-center justify-center min-h-screen p-4"
       >
-        <!-- Close Button -->
-        <button
-          @click="modalOpen = false"
-          class="absolute top-6 right-6 text-gray-500 hover:text-gray-700 w-10 h-10"
+        <div
+          x-on:click.stop
+          x-trap.noscroll.inert="modalOpen"
+          class="relative w-full max-w-3xl bg-white rounded-2xl shadow-md"
         >
-          <svg
-            viewBox="0 0 32 33"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <!-- Close Button -->
+          <button
+            @click="modalOpen = false"
+            class="absolute top-6 right-6 text-gray-500 hover:text-gray-700 w-10 h-10"
           >
-            <rect y="0.5" width="32" height="32" rx="16" fill="#F1F5F9" />
-            <path
-              d="M10.0485 8.85147C9.5799 8.38284 8.8201 8.38284 8.35147 8.85147C7.88284 9.3201 7.88284 10.0799 8.35147 10.5485L14.3029 16.5L8.35147 22.4515C7.88284 22.9201 7.88284 23.6799 8.35147 24.1485C8.8201 24.6172 9.5799 24.6172 10.0485 24.1485L16 18.1971L21.9515 24.1485C22.4201 24.6172 23.1799 24.6172 23.6485 24.1485C24.1172 23.6799 24.1172 22.9201 23.6485 22.4515L17.6971 16.5L23.6485 10.5485C24.1172 10.0799 24.1172 9.3201 23.6485 8.85147C23.1799 8.38284 22.4201 8.38284 21.9515 8.85147L16 14.8029L10.0485 8.85147Z"
-              fill="#334155"
-            />
-          </svg>
-        </button>
-
-        <!-- Modal Content -->
-        <div class="sm:px-10 px-6 sm:py-10 py-16">
-          <h2
-            class="text-4xl font-bold text-gray-800 mb-4 sm:text-7xl leading-normal sm:mt-10 mt-6"
-          >
-            Let's Chat! 👋
-          </h2>
-          <p
-            class="text-gray-600 mb-8 font-light sm:text-2xl text-xl leading-8"
-          >
-            <!-- Got questions, ideas, or just want to say hello? <br> -->
-            Drop me an email—I'd love to hear from you!
-          </p>
-
-          <!-- Email Address -->
-          <div
-            class="flex flex-col sm:flex-row items-center justify-between gap-4 text-lg"
-          >
-            <a
-              href="mailto:hello@nomanux.com"
-              class="px-4 sm:py-6 py-4 bg-slate-800 text-white rounded-xl transition-colors text-center text-xl sm:text-3xl w-full"
+            <svg
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              hello@nomanux.com
-            </a>
+              <rect y="0.5" width="32" height="32" rx="16" fill="#F1F5F9" />
+              <path
+                d="M10.0485 8.85147C9.5799 8.38284 8.8201 8.38284 8.35147 8.85147C7.88284 9.3201 7.88284 10.0799 8.35147 10.5485L14.3029 16.5L8.35147 22.4515C7.88284 22.9201 7.88284 23.6799 8.35147 24.1485C8.8201 24.6172 9.5799 24.6172 10.0485 24.1485L16 18.1971L21.9515 24.1485C22.4201 24.6172 23.1799 24.6172 23.6485 24.1485C24.1172 23.6799 24.1172 22.9201 23.6485 22.4515L17.6971 16.5L23.6485 10.5485C24.1172 10.0799 24.1172 9.3201 23.6485 8.85147C23.1799 8.38284 22.4201 8.38284 21.9515 8.85147L16 14.8029L10.0485 8.85147Z"
+                fill="#334155"
+              />
+            </svg>
+          </button>
 
-            <!-- Copy Button -->
-            <button
-              @click="navigator.clipboard.writeText('hello@nomanux.com'); emailCopied = true; setTimeout(() => emailCopied = false, 2000);"
-              class="px-4 sm:py-6 py-4 border text-xl border-gray-300 text-gray-700 rounded-xl hover:bg-white transition w-full sm:w-auto"
+          <!-- Modal Content -->
+          <div class="sm:px-10 px-6 sm:py-10 py-16">
+            <h2
+              class="text-4xl font-bold text-gray-800 mb-4 sm:text-7xl leading-normal sm:mt-10 mt-6"
+              :id="$id('modal-title')"
             >
-              <span
-                class="w-28 inline sm:block text-center"
-                x-show="!emailCopied"
-                >Copy Mail</span
+              Let's Chat! 👋
+            </h2>
+            <p
+              class="text-gray-600 mb-8 font-light sm:text-2xl text-xl leading-8"
+            >
+              Drop me an email—I'd love to hear from you!
+            </p>
+
+            <!-- Email Section -->
+            <div
+              class="flex flex-col sm:flex-row items-center justify-between gap-4 text-lg"
+            >
+              <a
+                href="mailto:hello@nomanux.com"
+                class="px-4 sm:py-6 py-4 bg-slate-800 text-white rounded-xl transition-colors text-center text-xl sm:text-3xl w-full"
               >
-              <span
-                class="w-28 inline sm:block text-center text-blue-600"
-                x-show="emailCopied"
-                >Copied!</span
+                hello@nomanux.com
+              </a>
+
+              <button
+                type="button"
+                @click="navigator.clipboard.writeText('hello@nomanux.com'); emailCopied = true; setTimeout(() => emailCopied = false, 2000);"
+                class="px-4 sm:py-6 py-4 border text-xl border-gray-300 text-gray-700 rounded-xl hover:bg-white transition w-full sm:w-auto"
               >
-            </button>
+                <span
+                  class="w-28 inline sm:block text-center"
+                  x-show="!emailCopied"
+                  >Copy Mail</span
+                >
+                <span
+                  class="w-28 inline sm:block text-center"
+                  x-show="emailCopied"
+                  class="text-blue-600"
+                  >Copied!</span
+                >
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -71,3 +71,10 @@ body {
 .p-pill {
   @apply px-4 py-1 text-sm font-normal  bg-slate-100 text-slate-800 rounded-full inline-flex;
 }
+
+[x-cloak] {
+  display: none !important;
+}
+html {
+  overflow-y: scroll;
+}
