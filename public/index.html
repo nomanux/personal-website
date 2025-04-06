@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P5SW8DKM");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta
@@ -88,6 +102,16 @@
     x-data="{ modalOpen: false, emailCopied: false, isMobileMenuOpen: false }"
     :class="(modalOpen || isMobileMenuOpen) ? 'overflow-hidden pr-[calc(100vw-100%)]' : ''"
   >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P5SW8DKM"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="absolute w-full h-screen top-0 left-0 right-0 z-0">
       <img src="./assets/img/herobg.svg" alt="" class="object-none" />
     </div>
@@ -288,14 +312,15 @@
                   <div class="flex sm:gap-4 gap-3">
                     <button
                       @click="modalOpen = true"
-                      class="inline-block rounded-xl sm:px-10 py-3 sm:py-4 px-4 bg-white border border-slate-200 text-center font-body text-lg text-slate-800 hover:bg-slate-100"
+                      class="inline-block rounded-xl px-6 py-3 sm:px-10 sm:py-4 bg-white border border-slate-200 text-center font-body text-lg text-slate-800 hover:bg-slate-100 whitespace-nowrap"
                     >
                       Ping Me
                     </button>
                     <a
+                      id="view-portfolio-btn"
                       target="_blank"
                       href="https://www.figma.com/file/mWvDRiLgemi6F1tI87qq5r/Noman's-Portfolio?type=design&t=bGHd2PXTMSHGDiGc-1"
-                      class="flex items-center justify-center gap-2 rounded-xl sm:px-10 sm:py-4 py-3 px-4 font-body bg-[#1C2D41] text-lg text-white hover:bg-slate-800 transition-all"
+                      class="flex items-center justify-center gap-2 rounded-xl sm:px-10 sm:py-4 py-3 px-4 font-body bg-[#1C2D41] text-lg text-white hover:bg-slate-800 transition-all w-full sm:w-auto"
                       ><svg
                         width="24"
                         height="24"
